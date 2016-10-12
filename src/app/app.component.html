@@ -1,3 +1,28 @@
+<md-sidenav-layout>
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+      <ul>
+  <li>
+    User (Settings)
+  </li>
+  <li>
+    Dashboard
+  </li>
+  <li>
+    Sites
+  </li>
+</ul>   
+    
+  </md-sidenav>
+    <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+
+    Angular Material2 Example App
+
+    <span class="app-toolbar-filler"></span>
+    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+  </md-toolbar>
 <h1>
   {{title}}
 </h1>
@@ -12,3 +37,24 @@
 <button md-mini-fab>
     <md-icon class="md-24">add</md-icon>
 </button>
+<md-card>
+   Basic card.
+</md-card>
+<ul>
+  <li *ngFor="let todo of todos">
+    <md-checkbox [checked]="todo.completed"
+                 (change)="todo.completed = $event">
+      {{todo.name}}
+    </md-checkbox>
+  </li>
+</ul>
+<md-radio-group>
+  <md-radio-button value="option_1">1</md-radio-button>
+  <md-radio-button value="option_2">2</md-radio-button>
+</md-radio-group>
+<md-input placeholder="amount" align="end">
+  <span md-prefix>$&nbsp;</span>
+  <span md-suffix>.00</span>
+</md-input>
+
+</md-sidenav-layout>
