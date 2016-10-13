@@ -1,24 +1,27 @@
 <md-sidenav-layout>
-  <md-sidenav #sidenav mode="side" class="app-sidenav">
-      <ul>
-  <li>
-    User (Settings)
-  </li>
-  <li>
-    Dashboard
-  </li>
-  <li>
-    Sites
-  </li>
-</ul>   
+  <md-sidenav #sidenav mode="side" class="app-sidenav" opened="true">
+      <md-toolbar color="primary">
+         StratusLIVE
+         <button md-icon-button>
+    <md-icon class="md-24">keyboard_arrow_down</md-icon>
+</button>
+      </md-toolbar>
+      <md-toolbar color="primary">
+          Dashboard
+      </md-toolbar>
+      <md-toolbar color="primary">
+        Sites
+        <span class="example-fill-remaining-space"></span>  
+<button md-icon-button>
+    <md-icon class="md-24">add_circle_outline</md-icon>
+</button>
+      </md-toolbar>
     
   </md-sidenav>
     <md-toolbar color="primary">
-    <button class="app-icon-button" (click)="sidenav.toggle()">
-      <i class="material-icons app-toolbar-menu">menu</i>
-    </button>
 
-    Angular Material2 Example App
+
+    Site Manager
 
     <span class="app-toolbar-filler"></span>
     <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
@@ -29,7 +32,7 @@
 <button md-button>FLAT</button>
 <button md-raised-button>RAISED</button>
 <button md-icon-button>
-    <md-icon class="md-24">favorite</md-icon>
+    <md-icon class="md-24">favorite border</md-icon>
 </button>
 <button md-fab>
     <md-icon class="md-24">add</md-icon>
